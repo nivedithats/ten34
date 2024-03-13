@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>
+            <ol>
+
+            </ol>
+        </li>
+        <li>Object Array</li>
+        <li>JSON Array</li>
+    </ul>
+    <div id="result">
+
+    </div>
+
+    <script>
+        let result = document.querySelector('#result');
+
+
+        result.innerHTML  += "<h1>Array literal</h1><hr>"
+        let users = ["frist","second","third",100,true]
+        result.innerHTML += `<h1>${typeof(users)}</h1>`
+        result.innerHTML += `<h1>${users}</h1>`
+        result.innerHTML += `<h1>${users[0]}</h1>`
+        result.innerHTML += `<h1>${users[1]}</h1>`
+        result.innerHTML += `<h1>${users[2]}</h1>`
+        result.innerHTML += `<h1>${users[3]}</h1>`
+        result.innerHTML += `<h1>${users[4]}</h1>`
+
+
+        //using for loop
+        result.innerHTML  += `<hr><h1>Using for loop</h1><hr>`
+        for(let i=0; i<users.length;i++){
+        result.innerHTML += `<h1>${users[i]}</h1>`
+
+        }
+        //using map method
+        result.innerHTML  += `<hr><h1>Using map method</h1><hr>`
+        users.map((item,index)=>{
+        result.innerHTML += `<h1 style="background-color:${index%2==0? "red":"green"};color:#fff;padding:10px">${item}</h1>`
+
+        })
+
+        //using for in method
+        result.innerHTML  += `<hr><h1>Using for in method</h1><hr>`
+        for(index in users){
+        result.innerHTML += `<h1>${users[index]}</h1>`
+
+        }
+        
+
+
+        
+
+    </script>
+</body>
+</html>
