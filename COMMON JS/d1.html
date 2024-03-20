@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>POLINDROME</h1>
+    </center>
+
+    <script>
+        let str = prompt('enter any string to check the polindrome or not..') //the string is like attry we can read the string indexex using array method (ex: str[0] //utput is h)
+        let temp = ''
+        for(let i=str.length-1; i>=0; i--){
+          
+            temp+=str[i]
+        } 
+        console.log(temp);
+        if(str==temp){
+            document.write(`<h1>${str} is a polindrome</h1>`)
+        }
+        else{
+            document.write(`<h1>${str} is not a polindrome</h1>`)
+        }
+    </script>
+    
+</body>
+</html>

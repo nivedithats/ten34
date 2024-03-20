@@ -6,37 +6,62 @@
     <title>Document</title>
 </head>
 <body>
-    
     <center>
         <h1>Array</h1>
-        <p>the array is the collection of data...!</p>
-
+        <p>the array is the collection of data.!</p>
     </center>
+
     <hr>
-    <h2>there are 3 type of arrays to create</h2>
+    <h2>There are 3 types of arrays to create</h2>
     <ul>
         <li>
             Literal array
             <ol>
                 <li>Literal</li>
                 <li>Array using Constructor</li>
-                <li>Aarray using Constractor with parameter</li>
+                <li>Array using Constructor with parameter</li>
             </ol>
-        </li>
-        
 
+        </li>
 
         <li>Object array</li>
-        <li>JOSN array</li>
+        <li>JSON array</li>
     </ul>
-<div id="resut">
 
-</div>
+    <div id="result">
+
+    </div>
 
 
-<script>
-    let result = document.querySelector('#result')
-    result.innerHTML = `<h1> </h1>`
-</script>
+    <script>
+        let result = document.querySelector('#result')
+        result.innerHTML = `<h1>Creating array using builtin constructor</h1>`
+        // let data = ["hello", "fine", "username", "college", 100, 200, 300, true]
+        let data = new Array() //array constructor
+        data[0] = "hello"
+        data[1] = "fine"
+        data[2] = "username"
+        data[3] = "college"
+        data[4] = 100
+        data[5] = 200
+        data[6] = 300
+        data[7] = true
+
+        console.log(data);
+        result.innerHTML += `<h1>${typeof(data)}</h1>`
+        result.innerHTML += `<h1>${data}</h1>`
+        result.innerHTML += `<h1>${data[0]}</h1>`
+        result.innerHTML +=` <h1>${data[1]}</h1>`
+        result.innerHTML += `<h1>${data[2]}</h1>`
+        result.innerHTML += `<h1>${data[3]}</h1>`
+        result.innerHTML += `<h1>${data[4]}</h1>`
+        result.innerHTML += `<h1>${data[5]}</h1>`
+
+        result.innerHTML += `<h1>printind array using map method</h1> <hr>`
+        data.map((item, index)=>{
+        result.innerHTML += `<h1>${item}</h1>`
+        })
+
+    </script>
 </body>
 </html>

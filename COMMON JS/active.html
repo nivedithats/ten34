@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            background-color: rgba(21, 78, 78, 0.63);
+            color: #fff;
+            height: 100px;
+            padding: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        
+    <div class="card1"  onclick="c(this)">
+        <h1>Heading1</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil ipsum impedit quam earum quas voluptates, aliquam placeat accusamus sapiente eaque eum, ea exercitationem nostrum, mollitia esse commodi! Aut, aspernatur aliquam.</p>
+
+    </div>
+         
+    <div class="card2" onclick="c(this)">
+        <h1>Heading2</h1>
+    </div>
+
+    <div class="card3" onclick="c(this)">
+        <h1>Heading3</h1>
+    </div>
+
+
+    <div class="card4" onclick="c(this)">
+        <h1>Heading4</h1>
+    </div>
+</div>
+
+
+
+    <script>
+        //let div = document.getElementById('.card');
+     function c(div){
+        div.classList.add('active')
+        alert(div.querySelector('h1').innerHTML)
+        div.querySelector('h1').innerHTML = "clicked";
+        alert(div.querySelector('p').innerHTML)
+        div.querySelector('p').innerHTML = "p";
+
+
+     }
+
+    </script>
+    
+</body>
+</html>

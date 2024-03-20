@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+
+        }
+        .product-card{
+            width: 300px;
+            box-shadow: 0px 0px 10px #ccc;
+            margin-bottom: 20px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-card img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .footer{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .btns{
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .btns button{
+            flex: 1;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .btns button:first-child{
+            background-color: rgb(255, 149, 0);
+        }
+        .btns button:last-child{
+            background-color: #0c0c0c;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <h1>Multiple student details storing using the array of objects</h1>
+    </center>
+    <div class="container" id="container">
+
+    </div>
+  
+
+    <script>
+        let product = {
+            productName:"Smart HD TV",
+            productDescription:"TCL 32-Inch Class S3 1080p LED Smart TV with Fire TV (32S350F, 2023 Model), Alexa Built-in, Apple AirPlay Compatibility, Streaming FHD Television,Black",
+            store:"Visit the TCL Store",
+            ratingdata:{
+                rate:4.2,
+                ratings: 462,
+            },
+            price:139.99,
+            discount:17,
+            Size:"32 Inches",
+            productImage:"https://m.media-amazon.com/images/I/711a7srcZdL.AC_SX679.jpg"
+        }
+
+
+        ///storing multiple products
+        let products = [
+            {
+                 productName:"Smart HD TV Stand",
+            productDescription:"Full Motion TV Monitor Wall Mount Bracket Articulating Arms Swivel Tilt Extension Rotation for Most 13-42 Inch LED LCD Flat Curved Screen TVs & Monitors, Max VESA 200x200mm up to 44lbs by Pipishell",
+            store:"Visit the TCL Store",
+            ratingdata:{
+                rate:4.2,
+                ratings: 462,
+            },
+            price:139.99,
+            discount:17,
+            Size:"32 Inches",
+            productImage:"https://m.media-amazon.com/images/I/61EBlj11AbL.AC_SX679.jpg"
+            },
+
+            {
+                productName:"Smart HD TV",
+            productDescription:"TCL 32-Inch Class S3 1080p LED Smart TV with Fire TV (32S350F, 2023 Model), Alexa Built-in, Apple AirPlay Compatibility, Streaming FHD Television,Black",
+            store:"Visit the TCL Store",
+            ratingdata:{
+                rate:4.2,
+                ratings: 462,
+            },
+            price:139.99,
+            discount:17,
+            Size:"32 Inches",
+            productImage:"https://m.media-amazon.com/images/I/711a7srcZdL.AC_SX679.jpg"
+            },
+
+            {
+                productName:"Smart HD TV",
+            productDescription:"TCL 32-Inch Class S3 1080p LED Smart TV with Fire TV (32S350F, 2023 Model), Alexa Built-in, Apple AirPlay Compatibility, Streaming FHD Television,Black",
+            store:"Visit the TCL Store",
+            ratingdata:{
+                rate:4.2,
+                ratings: 462,
+            },
+            price:139.99,
+            discount:17,
+            Size:"32 Inches",
+            productImage:"https://m.media-amazon.com/images/I/711a7srcZdL.AC_SX679.jpg"
+            }
+        ]
+
+            let container = document.querySelector('#container');
+
+        console.log(products[0])
+        products.map((item, index)=>{
+            container.innerHTML +=`
+            <div class="product-card">
+        <img src=${item.productImage} alt="">
+        <div class="product-details">
+            <h4>${item.productName}</h4>
+            <small>${item.productDescription}</small>
+            <div class="footer">
+                <p>${item.ratingdata.rate} rating</p>
+                <h5>$ ${item.price}</h5>
+            </div>
+           <div class="btns">
+            <button>Order Now</button>
+            <button>Know More</button>
+            </div>
+        </div>
+    </div>
+    
+            `
+        })
+    </script>
+</body>
+</html>

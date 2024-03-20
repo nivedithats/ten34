@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    
+
+    <center>
+        <h1>marks = 70-100(A)   and 50-70(B) and 35-50(C) and 30-35(D) or 0-30(Fail)</h1>
+    </center>
+    <div id="result">
+
+    </div>
+
+    <script>
+        let result = document.querySelector('#result');
+        let marks = Number(prompt ('Enter the student marks to find the grade...! '));
+        /* if (marks>=70 || marks==100){
+            result.innerHTML  += ` <h1>student marks is ${marks} and student grade is A</h1>`
+        }
+        else if(marks>=50 || marks==70){
+            result.innerHTML  += ` <h1>student marks is ${marks} and student grade is B</h1>`
+        }
+        else if(marks>=35 || marks==50){
+            result.innerHTML  += ` <h1>student marks is ${marks} and student grade is C</h1>`
+        }
+        else if(marks>=30 || marks==35){
+            result.innerHTML  += ` <h1>student marks is ${marks} and student grade is D</h1>`
+        }
+        else if(marks<35){
+            result.innerHTML  += ` <h1>student marks is ${marks} and student grade is Fail</h1>`
+        }
+        else{
+            result.innerHTML  += ` <h1>student marks is ${marks} and student grade is not valid</h1>`
+        } */
+
+        if (marks>=70 && marks<=100){
+            result.innerHTML  += ` <h1>student marks is ${marks} and student grade is A</h1>`
+        }
+        else if(marks>=50 && marks<=70){
+            result.innerHTML  += ` <h1>student marks is ${marks} and student grade is B</h1>`
+        }
+        else if(marks>=35 && marks<=50){
+            result.innerHTML  += ` <h1>student marks is ${marks} and student grade is C</h1>`
+        }
+        else if(marks>=30 && marks<=35){
+            result.innerHTML  += ` <h1>student marks is ${marks} and student grade is D</h1>`
+        }
+        else if(marks<35){
+            result.innerHTML  += ` <h1>student marks is ${marks} and student grade is Fail</h1>`
+        }
+        else{
+            result.innerHTML  += ` <h1>student marks is ${marks} and student grade is not valid</h1>`
+        }
+ 
+        
+
+    </script>
+</body>
+</html>

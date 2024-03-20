@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>IF ELSE LADDER</h1>
+    </center>
+    
+    <div id="result"></div>
+
+    <script>
+        let fristnumer = prompt('Enter the fristNumber')
+        let secondnumber = prompt('Enter the secondNumber')
+
+
+        let total = Number(fristnumer) + Number(secondnumber)
+        let result = document.getElementById('result')
+        console.log(Number(fristnumer));
+        console.log(total);
+
+        if(Number(fristnumer)===Number(secondnumber)){
+            result.innerHTML = `<h1>${fristnumer}is equal to ${secondnumber}</h1>`
+        }
+        else if (Number(fristnumer)>Number(secondnumber)){
+                result.innerHTML = `<h1>${fristnumer}is greater than to the ${secondnumber}</h1>`
+        }
+        
+            else if (Number(fristnumer) < Number(secondnumber)){
+                result.innerHTML = `<h1>${fristnumer}is less than to the ${secondnumber}</h1>`
+        }
+        else if (Number(fristnumer)!==Number(secondnumber)){
+            result.innerHTML = `<h1>${fristnumer}is Not equal to ${secondnumber}</h1>`
+        }
+        else{
+            result.innerHTML =`<h1>Enter Valid Data</h1>`
+        }
+
+
+    </script>
+</body>
+</html>

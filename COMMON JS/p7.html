@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<div id="result"></div>
+
+
+<script>
+    let result = document.querySelector('#result');
+    let user = {
+        "firstname":"chethan",
+        "lastname":"kumar",
+        "phoneNumber":9737562533,
+    }
+    result.innerHTML =`<h1>${user.firstname + "" + user.lastname}</h1>`
+
+
+    let allusers =[
+    {
+        "firstname":"chethan1",
+        "lastname":"kumar1",
+        "phoneNumber":9737562533,
+    },
+    {
+    "firstname":"chethan2",
+    "lastname":"kumar2",
+    "phoneNumber":9737562533,
+    },
+    {
+    "firstname":"chethan3",
+    "lastname":"kumar3",
+    "phoneNumber":9737562533,
+    }
+    ]
+
+
+    result.innerHTML += `<h1>${allusers[0].firstname + "" + allusers[0].lastname}</h1>`
+
+
+
+    allusers.map((item,index)=>{
+        result.innerHTML +=`
+        <h1>${item.firstname + "" + item.lastname}</h1>`
+    })
+
+</script>
+</body>
+</html>

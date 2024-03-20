@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Form</h1>
+    </center>
+    <hr>
+    <div class="container">
+        <form id="">
+            <h3>Create a new Account</h3>
+            <label for="">Username</label>
+            <input type="text" name="username" id="name" placeholder="confirm name" required>
+
+
+            <label for="">Email</label>
+            <input type="text" name="email" id="email" placeholder="confirm email">
+
+
+            <label for="">phone number</label>
+            <input type="text" name="phone" id="phone" placeholder="confirm phonenumber">
+
+            <label for="">It is good?</label>
+            <label for="">
+                <input type="text">
+            </label>
+
+
+
+        
+        </form>
+    </div>
+
+
+    <script>
+        let name = document.querySelector('#name');
+        let  email = document.querySelector('#email');
+        let  phone = document.querySelector('#phone');
+        let  gender = document.querySelector('#gender');
+        let  action1 = document.querySelector('#action1');
+        let  action2 = document.querySelector('#action2');
+        const submitHandler = (e) =>{
+            e.preventDefault();//to prevent page refresh or page reload
+
+            const user ={
+                username:name.value,
+                emailAddress:email.value,
+                mobile:phone.value,
+                genderValue:gender.value,
+                action1:action1.Checked,
+                action2:action2.Checked
+
+
+            }
+            console.log(user);
+
+        }
+        document.getElementById('form').addEventListener('submit',submitHandler)
+        document.getElementById('form').addEventListener('reset',()=>{
+            if(confirm())
+        })
+        
+
+    </script>
+</body>
+</html>

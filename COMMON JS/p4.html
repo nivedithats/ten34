@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result">
+
+    </div>
+
+
+    <script>
+        let result = document.querySelector('#result');
+
+
+        //let colors = new Array(); = "red";
+        // colors[0] = "red";
+        // colors[1] = "green ";
+        // colors[2] = "pink;
+        // colors[3] = "blue";
+        // colors[4] = "black";
+        //console.log(colors);
+
+
+        //array using constractor parameter
+
+        
+        let colors = new Array("red","blue","green","bink","black",100,true);
+        console.log(colors);
+        result.innerHTML += `<h1>${colors}</h1>`
+        result.innerHTML += `<h1>${typeof colors}</h1>`
+
+
+        colors.map((item,index)=>{
+        result.innerHTML += `<h1>${index+1})${item}</h1>`
+
+        })
+        
+
+
+
+    </script>
+</body>
+
+</html>

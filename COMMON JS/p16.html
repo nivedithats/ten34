@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>With parameter, without return</h1>
+    </center>
+
+    <script>
+        function StudentDetails(firstname, secondname){
+            document.write(`<h1>the first parameter is: ${firstname}</h1>`);
+            document.write(`<h1>the second parameter is: ${secondname}</h1>`);
+        }
+        // StudentDetails("Bhaskar", "cm");
+
+        // var fn = "bhaskar1";
+        // var sn = "cm1";
+        // StudentDetails(fn,sn)
+
+        function generateFullname(firstname, lastname){
+            var user = {
+                first:firstname,
+                last:lastname
+            }
+            console.log(user);
+            console.log(user.first);
+            console.log(user.last);
+            document.write(firstname + " "+ lastname);
+        }
+
+        let fn = prompt('enter your firstname')
+        let ln = prompt('enter your lastname')
+
+        generateFullname(fn, ln);
+
+
+
+
+    </script>
+</body>
+</html>

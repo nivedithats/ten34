@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        b{
+           color: blue;
+            font-size: 3rem;
+        }
+    .container{
+   display: flex;
+   align-items: center;
+   justify-content:space-between;
+   font-size: 0.7rem;
+    }
+    .fa-solid fa-ellipsis-vertical{
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
+   
+    
+    .card{
+            width: 450px;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 20px #5a5858;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        
+    <b>indeed</b>
+</center>
+      <div id="result"></div>
+
+
+    <script>
+        let JobPortal =[
+       { 
+        JobRole:"Costumer Service Representative",
+        CompanyName:"Cutibless healthcare pvt ltd",
+        CompanyAdress:"Bengluru,Karnataka",
+        Salary:"₹14,000 - ₹20,000",
+        Work:"Full-time",
+        Shift:"Day Shift",
+        Apply:"Easily apply",
+        WorkDetails:{
+            Benefits1:"MBA would be an added bonus.",
+            Benefits2:"Incentives on achieving the targets will be provided.",
+            Benefits3:"JobTypes:Full-time,Contract."
+
+
+        },
+        Stastus:"Active Today",
+
+
+    },
+    { 
+        JobRole:"Costumer Service Representative",
+        CompanyName:"Cutibless healthcare pvt ltd",
+        CompanyAdress:"Bengluru,Karnataka",
+        Salary:"₹14,000 - ₹20,000",
+        Work:"Full-time",
+        Shift:"Day Shift",
+        Apply:"Easily apply",
+        WorkDetails:{
+            Benefits1:"MBA would be an added bonus.",
+            Benefits2:"Incentives on achieving the targets will be provided.",
+            Benefits3:"JobTypes:Full-time,Contract."
+
+
+        },
+        Stastus:"Active Today",
+
+
+    },
+     { 
+        JobRole:"Costumer Service Representative",
+        CompanyName:"Cutibless healthcare pvt ltd",
+        CompanyAdress:"Bengluru,Karnataka",
+        Salary:"₹14,000 - ₹20,000",
+        Work:"Full-time",
+        Shift:"Day Shift",
+        Apply:"Easily apply",
+        WorkDetails:{
+            Benefits1:"MBA would be an added bonus.",
+            Benefits2:"Incentives on achieving the targets will be provided.",
+            Benefits3:"JobTypes:Full-time,Contract."
+
+
+        },
+        Stastus:"Active Today",
+
+
+    },
+     { 
+        JobRole:"Costumer Service Representative",
+        CompanyName:"Cutibless healthcare pvt ltd",
+        CompanyAdress:"Bengluru,Karnataka",
+        Salary:"₹14,000 - ₹20,000",
+        Work:"Full-time",
+        Shift:"Day Shift",
+        Apply:"Easily apply",
+        WorkDetails:{
+            Benefits1:"MBA would be an added bonus.",
+            Benefits2:"Incentives on achieving the targets will be provided.",
+            Benefits3:"JobTypes:Full-time,Contract."
+
+
+        },
+        Stastus:"Active Today",
+
+
+    },
+     { 
+        JobRole:"Costumer Service Representative",
+        CompanyName:"Cutibless healthcare pvt ltd",
+        CompanyAdress:"Bengluru,Karnataka",
+        Salary:"₹14,000 - ₹20,000",
+        Work:"Full-time",
+        Shift:"Day Shift",
+        Apply:"Easily apply",
+        WorkDetails:{
+            Benefits1:"MBA would be an added bonus.",
+            Benefits2:"Incentives on achieving the targets will be provided.",
+            Benefits3:"JobTypes:Full-time,Contract."
+
+
+        },
+        Stastus:"Active Today",
+
+
+    } ,
+    { 
+        JobRole:"Costumer Service Representative",
+        CompanyName:"Cutibless healthcare pvt ltd",
+        CompanyAdress:"Bengluru,Karnataka",
+        Salary:"₹14,000 - ₹20,000",
+        Work:"Full-time",
+        Shift:"Day Shift",
+        Apply:"Easily apply",
+        WorkDetails:{
+            Benefits1:"MBA would be an added bonus.",
+            Benefits2:"Incentives on achieving the targets will be provided.",
+            Benefits3:"JobTypes:Full-time,Contract."
+
+
+        },
+        Stastus:"Active Today",
+
+
+    }
+        ]
+
+
+
+
+        let result = document.querySelector('#result');
+        JobPortal.map((item,index)=> {
+            result.innerHTML += `
+            <div class="card">
+            <div class ="container">
+            <h1>${item.JobRole}</h1>
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+        </div>
+            <div class ="card-text">
+                <h1>${item.CompanyName}</h1>
+                <h2>${item.CompanyAdress}</h2>
+            </div>
+                <div class ="card2">
+                    <p>${item.Salary}</p>
+                    <p>${item.Work}</p>
+                    <p>${item.Shift}</p>
+                </div>
+                    <div class="card3">
+                    <i class="fa-solid fa-arrow-right"style="color:#075ced;margin-top:4px"></i><p>${item.Apply}</p>
+                   
+                </div>
+                   <div class="card4">
+                    <ul>
+                        <li>${item.WorkDetails.Benefits1}</li>
+                        <li>${item.WorkDetails.Benefits2}</li>
+                        <li>${item.WorkDetails.Benefits3}</li>
+                    </div>
+
+                        <div class = "car5">
+                            <h5>${item.Stastus}</h5>
+                       
+                            
+                    </div>
+                </div>
+
+
+                   
+                    
+
+
+
+
+        `
+    
+    })
+
+    </script>
+</body>
+</html>

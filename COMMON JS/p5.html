@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <center>
+        <h1>Object Array(array of abjects)</h1>
+    </center>
+    <div id="result">
+
+    </div>
+ 
+    
+
+
+
+    <script>
+        //object is key : value this are calling property
+        let students = {
+            studentname : "exampleStudent",
+            studentAddress : "banglore",
+            phoneNumber:7022153020,
+            age:18,
+            passed:false,
+            marks:{
+                kannada:80,
+                English:60,
+                Hindi:50,
+                Tamil:70,
+            }
+
+        }
+        let result = document.querySelector('#result');
+        result.innerHTML = typeof students
+        result.innerHTML +=`
+        <div class = "card">
+            <h1>studentname:${students.studentname}</h1>
+            <p>address:${students.studentAddress}</p>
+            <p>mobile:${students.phoneNumber}</p>
+            <p>Age:${students.age}</p>
+            <p style="color:${students.passed==true?("green"):("red")}">passed:${students.passed==true?("students status is good"):("student states is not good")}</p>
+            <table border="1" cellspacing="0" cellpadding="15">
+                <tr>
+                    <th>Kannada</th>
+                    <th>English</th>
+                    <th>Hindi</th>
+                    <th>Tamil</th>
+                </tr>
+                <tr>
+                    <td>${students.marks.kannada}</td>
+                    <td>${students.marks.English}</td>
+                    <td>${students.marks.Hindi}</td>
+                    <td>${students.marks.Tamil}</td>
+        
+                </tr>
+            </table>
+        </div>
+        `
+    </script>
+
+</body>
+</html>

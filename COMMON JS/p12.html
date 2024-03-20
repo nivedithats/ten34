@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      
+        
+        #error1, #error2{
+            color: red;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 100vh;
+
+            
+        }
+        
+        .card{
+            width: 300px;
+            min-height: 300px;
+             box-shadow: 0px 0px 10px #ccc;
+            padding: 30px;
+            
+        }
+        input{
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #efdddd;
+            outline: none;
+            box-shadow: 0px 0px 10px #b6b1b1;
+            font-size: 1.2rem;
+            font-weight: 100;
+
+        }
+        input:hover{
+            border: 1px solid #000;
+        }
+        button{
+            width: 100%;
+            height: 50px;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+             letter-spacing: 1px;
+            background-color: rgba(86, 86, 247, 0.822);
+            box-shadow: 0px 0px 10px rgb(186, 186, 252);
+            margin-top: 30px;
+            cursor: pointer;
+            color: #ffffff;
+            font-size: 1rem;
+            
+
+        }
+        button:hover{
+            border: 1px solid #000;
+        }
+        #operation{
+            width: 100%;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            box-shadow: 0px 0px 20px #CCC;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: 200;
+            
+
+        }
+        #operation:hover{
+            border: 1px solid #000;
+        }
+        option{
+            background-color: #000;
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+       
+        
+
+
+    </style>
+</head>
+<body>
+   <div class="container">
+    
+    <div class="card">
+        <input type="number" placeholder="Enter the first number" id="firstNumber"> <br>
+        <p id="error1"></p>
+        <input type="number" placeholder="Enter the second number" id="secondNumber">
+        <p id="error2"></p>
+        <br>
+        <select name="" id="operation">
+            <option value="" selected disabled>--select operation--</option>
+            <option value="add">Addition</option>
+            <option value="sub">Subtraction</option>
+            <option value="mul">Multiplication</option>
+            <option value="div">Division</option>
+            <option value="mod">Modulus</option>
+        </select>
+        <button onclick="calucate()">Calucate</button>
+        <p id="result"></p>
+    </div>
+</div>
+
+    <script>
+
+        let result = document.getElementById('result');
+        let error1 = document.getElementById('error1');
+        let error2 = document.getElementById('error2');
+        let firstNumber = document.getElementById('firstNumber')
+        let secondNumber = document.getElementById('secondNumber')
+        let operation = document.getElementById('operation')
+
+        function calucate(){
+            if(firstNumber.value == "" || firstNumber.value.length ==0 ){
+                firstNumber.style.border = "2px solid red"
+                error1.innerText = "please fill this field.."
+                        }
+            else if(secondNumber.value == "" || secondNumber.value.length ==0 ){
+                firstNumber.style.border = "2px solid green"
+    
+                secondNumber.style.border = "2px solid red"
+                error2.innerText = "please fill this field.."
+            }
+            else{
+                error1.innerText = ""
+                error2.innerText = ""
+                firstNumber.style.border = "2px solid green"
+                secondNumber.style.border = "2px solid green"
+            }
+
+            switch (operation.value) {
+                case 'add':
+                    result.innerHTML = `<h1>${Number(firstNumber.value) + Number(secondNumber.value)}</h1>`
+                    break;
+
+                    case 'sub':
+                    result.innerHTML = `<h1>${Number(firstNumber.value) - Number(secondNumber.value)}</h1>`
+                    break;
+
+                    case 'mul':
+                    result.innerHTML = `<h1>${Number(firstNumber.value) * Number(secondNumber.value)}</h1>`
+                    break;
+
+                    case 'div':
+                    result.innerHTML = `<h1>${Number(firstNumber.value) / Number(secondNumber.value)}</h1>`
+                    break;
+
+                    case 'mod':
+                    result.innerHTML = `<h1>${Number(firstNumber.value) % Number(secondNumber.value)}</h1>`
+                    break;
+            
+                    
+                default:
+                    break;
+            }
+        }
+
+        
+    </script>
+</body>
+</html>

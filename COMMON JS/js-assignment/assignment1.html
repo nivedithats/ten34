@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College student portal</title>
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+       
+        .container{
+            display: flex;
+            
+            
+           
+        }
+         .container img{
+            width: 20vw;
+            height: 40vh;
+            border-radius: 50%;
+            margin-right: 100px;
+        }
+
+        
+       
+       
+        
+
+       
+        
+
+    </style>
+</head>
+<body>
+    <center>
+       
+        
+   
+        
+    <img src="https://results.uomexam.com/Content/images/UoM%20Logo.png" alt="">
+</center>
+    <div id="result">
+
+    </div>
+
+    
+    
+   
+    
+
+    
+
+    <script>
+
+        
+        let University = {
+        
+          UniversityImage:"https://www.uompgadmissions.com/images/SLIDER-1_0.jpg",
+          UniversityName:"Mysore University",
+          UniversityGraduate:"Post Graduate Examination Result",
+          studentData:{
+                StudentProfile:"https://img.freepik.com/free-photo/close-up-beautiful-woman-smiling_23-2148369437.jpg",
+                StudentName:"chaithanya",
+                StudentRegNo:"MS201187",
+                Graduate:"post Graduate",
+                YearOfPassing:2024,
+                Branch:"BSc",
+                SlectctedCourse:"PMCs",
+
+
+          },
+          Sem1:{
+            Marks:{
+             kannada:90,
+             English:70,
+             Physics:85,
+             Maths:90,
+             ComputerScience:90,
+             IndianConstitutions:89,
+            }
+           },
+           Sem2:{
+            Marks:{
+             kannada:80,
+             English:80,
+             Physics:75,
+             Maths:80,
+             ComputerScience:94,
+             EVS:80,
+            }
+           },
+           Sem3:{
+            Marks:{
+             kannada:94,
+             English:60,
+             Physics:75,
+             Maths:90,
+             ComputerScience:90,
+            }
+           },
+           Sem4:{
+            Marks:{
+             kannada:89,
+             English:75,
+             Physics:80,
+             Maths:84,
+             ComputerScience:95,
+
+            }
+        },
+        Sem5:{
+            Marks:{
+            Physics:88,
+             Maths:92,
+             ComputerScience:94,
+            }
+           },
+
+           Sem6:{
+            Marks:{
+            Physics:78,
+             Maths:94,
+             ComputerScience:86,
+            }
+           },
+        }
+        
+        let result = document.querySelector('#result');
+        result.innerHTML +=`
+        <div class="card">
+            <img src=${University.UniversityImage} alt="">
+
+            <h1>University Name : ${University.UniversityName}</h1> 
+            <h2>University Graduate : ${University.UniversityGraduate}</h2>
+        </div>
+            <div class="container">
+            
+            <img src=${University.studentData.StudentProfile} alt="">
+            <div class = "card2">
+            <h3>Student Name : ${ University.studentData.StudentName}</h3>
+            <h3> Student RegNo : ${ University.studentData.StudentRegNo}</h3>
+            <h3> Graduate : ${ University.studentData.Graduate}</h3>
+            <h3>YearOfPassing : ${University.studentData.YearOfPassing}</h3>
+            <h3>Branch : ${University.studentData.Branch}</h3>
+            <h3>SlectctedCourse : ${University.studentData.SlectctedCourse}</h3>
+            </div>
+            </div>
+       
+
+<div class="card3">
+            <h2>Semester1</h2>
+            <table border="1" cellpadding="25px" cellspacing="0">
+                <tr>
+                    
+                    <th>Kannada</th>
+                    <th>English</th>
+                    <th>Physics</th>
+                    <th>Maths</th>
+                    <th>ComputerScience</th>
+                    <th>IndianConstitution</th>
+                </tr>
+                
+                <tr>
+                    
+                    <td>${University.Sem1.Marks.kannada}</td>
+                    <td>${University.Sem1.Marks.English}</td>
+                    <td>${University.Sem1.Marks.Physics}</td>
+                    <td>${University.Sem1.Marks.Maths}</td>
+                    <td>${University.Sem1.Marks.ComputerScience}</td>
+                    <td>${University.Sem1.Marks.IndianConstitutions}</td>
+
+
+                </tr>
+
+
+            </table>
+
+            
+
+
+            <h2>Semester2</h2>
+            <table border="1" cellpadding="25px" cellspacing="0">
+               <tr>
+                    
+                    <th>Kannada</th>
+                    <th>English</th>
+                    <th>Physics</th>
+                    <th>Maths</th>
+                    <th>ComputerScience</th>
+                    <th>EVS</th>
+                </tr>
+                
+                <tr>
+                    
+                    <td>${University.Sem2.Marks.kannada}</td>
+                    <td>${University.Sem2.Marks.English}</td>
+                    <td>${University.Sem2.Marks.Physics}</td>
+                    <td>${University.Sem2.Marks.Maths}</td>
+                    <td>${University.Sem2.Marks.ComputerScience}</td>
+                    <td>${University.Sem2.Marks.EVS}</td>
+
+
+                </tr>
+            </table>
+
+            <h2>Semester3</h2>
+            <table border="1" cellpadding="25px" cellspacing="0">
+               <tr>
+                    
+                    <th>Kannada</th>
+                    <th>English</th>
+                    <th>Physics</th>
+                    <th>Maths</th>
+                    <th>ComputerScience</th>
+                    
+                </tr>
+                
+                <tr>
+                    
+                    <td>${University.Sem3.Marks.kannada}</td>
+                    <td>${University.Sem3.Marks.English}</td>
+                    <td>${University.Sem3.Marks.Physics}</td>
+                    <td>${University.Sem3.Marks.Maths}</td>
+                    <td>${University.Sem3.Marks.ComputerScience}</td>
+
+                    
+
+                </tr>
+            </table>
+
+
+                <h2>Semester4</h2>
+                <table border="1" cellpadding="25px" cellspacing="0">
+                   <tr>
+                        
+                        <th>Kannada</th>
+                        <th>English</th>
+                        <th>Physics</th>
+                        <th>Maths</th>
+                        <th>ComputerScience</th>
+
+                    </tr>
+                    
+                    <tr>
+                        
+                        <td>${University.Sem4.Marks.kannada}</td>
+                        <td>${University.Sem4.Marks.English}</td>
+                        <td>${University.Sem4.Marks.Physics}</td>
+                        <td>${University.Sem4.Marks.Maths}</td>
+                        <td>${University.Sem4.Marks.ComputerScience}</td>
+
+                        
+    
+                    </tr>
+                </table>
+
+                <h2>Semester5</h2>
+                <table border="1" cellpadding="25px" cellspacing="0">
+                   <tr>
+                        <th>Physics</th>
+                        <th>Maths</th>
+                        <th>ComputerScience</th>
+
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>${University.Sem5.Marks.Physics}</td>
+                        <td>${University.Sem5.Marks.Maths}</td>
+                        <td>${University.Sem5.Marks.ComputerScience}</td>
+                </tr>
+            </table>
+
+            <h2>Semester6</h2>
+            <table border="1" cellpadding="25px" cellspacing="0">
+               <tr>
+                    <th>Physics</th>
+                    <th>Maths</th>
+                    <th>ComputerScience</th>
+
+                    
+                </tr>
+                
+                <tr>
+                    <td>${University.Sem6.Marks.Physics}</td>
+                    <td>${University.Sem6.Marks.Maths}</td>
+                    <td>${University.Sem6.Marks.ComputerScience}</td>
+            </tr>
+        </table>
+    </div>`
+
+       
+        
+
+    </script>
+</body>
+</html>

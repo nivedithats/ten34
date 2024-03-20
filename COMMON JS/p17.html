@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Parameter with return value</h1>
+
+    <div id="result"></div>
+
+
+    <script>
+        let result = document.getElementById('result');
+
+
+        function employeeDetails(username,phonenumber,address,id){
+            const details = {
+                employeeName : username,
+                mobile : phonenumber,
+                adr : address,
+                emplyeeid : id
+
+            }
+            console.log(details);
+            result.innerHTML=`
+            username:${details.employeeName}<br>
+            mobile:${details.mobile}<br>
+            address:${details.adr}<br>
+            emloyee ID :${details.emplyeeid}
+            `
+
+
+
+            return details;
+        }
+        employeeDetails("bhashkar",7022152010,"banglore",'EMP233')
+    </script>
+</body>
+</html>
