@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Max and Min number in array</h1>
+    </center>
+<hr>
+
+<script>
+    let array =[20,40,10,3,4,1,10,50]
+
+    let min = array[0];
+    for (let i=0; i<=array.length-1; i++){
+        if(array[i] < min){
+            min = array[i]
+            
+        }
+    }
+
+
+    let max = array[0];
+    for (let j=0; j<=array.length-1; j++){
+        if(array[j] > max){
+            max = array[j]
+        }
+    }
+
+
+
+    console.log(min)
+    console.log(max)
+</script>
+
+    
+</body>
+</html>

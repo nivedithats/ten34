@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>                                  
+<body>
+     <script>
+       // let array = [3,5,7,9,1,2,3,3,5,5,6,8,7]
+       //let array = ["apple","Banana","Banana","orange","apple"]
+       let array = [1,2,2,3,4,4,5]
+        let dup = []
+
+
+        for (let i=0; i<array.length; i++){ //3
+            for(let j=i+1; j<array.length; j++){ //5
+ 
+                if(array[i] === array[j]){
+                    dup.push(array[i])
+                    break;
+                }
+
+            }
+        }
+        console.log(dup)
+        // i=0 array[i]=3 
+        // j=i+1 array[1]=5
+        // j=i+1 array[2]=7
+     </script>
+</body>
+</html>

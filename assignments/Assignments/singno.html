@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: aquamarine;
+        }
+
+        input {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: lemonchiffon;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+        }
+        p{
+            color: forestgreen;
+        }
+        button{
+            border: none;
+            outline: none;
+            margin-top: 5px;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="number" placeholder="enter number to check the its sign" id="fnumber"><br>
+        <button onclick="signofNumber()">check sign of a Number</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        let result = document.getElementById('result');
+        let number =document.getElementById('fnumber');
+        
+        function signofNumber(){
+            if(number.value > 0){
+                result.innerHTML="Positive";
+            }
+            else if(number.value == 0){
+                result.innerHTML="Neither positive nor negative";
+            }
+            else{
+                result.innerHTML="Negative";
+            }
+        }
+
+        
+    </script>
+
+</body>
+
+</html>

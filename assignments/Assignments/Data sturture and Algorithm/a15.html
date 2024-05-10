@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = ["2","3","6","7",5,6,7,8,true,false]
+        let str = []
+        let num =[]
+        let bol = []
+
+        for(let i=0; i<array.length; i++){
+            if( typeof array[i] == "string"){
+                str.push(array[i])
+            }
+
+            else if(typeof  array[i] == "number"){
+                num.push(array[i])
+            }
+            else if ( typeof array[i] == "boolean"){
+                bol.push(array[i])
+            }
+        }
+        console.log(str);
+        console.log(num);
+        console.log(bol);
+    </script>
+</body>
+</html>

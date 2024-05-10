@@ -13,12 +13,14 @@
     <div id="result"></div>
 
     <script>
+        let result = document.getElementById('result')
+
         let fristnumer = prompt('Enter the fristNumber')
         let secondnumber = prompt('Enter the secondNumber')
 
 
         let total = Number(fristnumer) + Number(secondnumber)
-        let result = document.getElementById('result')
+
         console.log(Number(fristnumer));
         console.log(total);
 
@@ -36,7 +38,7 @@
             result.innerHTML = `<h1>${fristnumer}is Not equal to ${secondnumber}</h1>`
         }
         else{
-            result.innerHTML =`<h1>Enter Valid Data</h1>`
+            result.innerHTML =`<h1>Enter Valid Data</h1>` 
         }
 
 

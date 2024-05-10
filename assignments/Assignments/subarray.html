@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let array = [2,1,5,8,4]
+
+
+        function maximumsubArray(){
+            if(array.length===0){
+                return 0
+            }
+            if(array.length==1){
+                return array[0]
+            }
+            let incl = array[0] //2
+            let excl = 0 //0
+            for(let i=1; i<array.length; i++){
+                let newinclude = excl + array[i];
+                excl = Math.max(incl,excl)
+                incl = newinclude;
+
+            }
+            return Math.max(incl,excl)
+        }
+        console.log(maximumsubArray(array));
+
+    </script>
+</body>
+</html>
